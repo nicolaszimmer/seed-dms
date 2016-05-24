@@ -231,7 +231,7 @@ $(document).ready(function () {
 	} /* }}} */
 
 	function globalNavigation($folder=null) { /* {{{ */
-		echo "<div class=\"navbar navbar-inverse navbar-fixed-top\">\n";
+		echo "<div class=\"navbar navbar-clean navbar-fixed-top\">\n";
 		echo " <div class=\"navbar-inner\">\n";
 		echo "  <div class=\"container-fluid\">\n";
 		echo "   <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".nav-col1\">\n";
