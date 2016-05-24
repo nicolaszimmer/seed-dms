@@ -96,7 +96,7 @@ $(document).ready( function() {
 		$this->pageNavigation(getMLText("sign_in"));
 ?>
 <?php $this->contentContainerStart(); ?>
-<div class="center" style="text-align:center"><img src="../out/images/vendor/ts_small_horizontal.svg" style="height:auto;width:200px"></div>
+<div class="center" style="text-align:center"><img src="../out/images/vendor/ts_small_horizontal.svg" style="height:auto;width:400px"></div>
 <form class="form-horizontal" action="../op/op.Login.php" method="post" name="form1" id="form">
 <?php
 		if ($refer) {
