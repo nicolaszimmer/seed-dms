@@ -316,6 +316,27 @@ body,
 
 /***/
 
+/* ui */
+.area-container{
+	height: 50px;
+    padding: 10px;
+    border: 1px dashed #000;
+}
+
+.area-container:hover{
+	border: 1px solid blue;
+}
+
+.h-center{
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
 
 body { /* Add top padding for full-width layout */
 	padding-top: 60px;

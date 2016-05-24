@@ -1426,7 +1426,7 @@ $(function() {
 			$content .= "</table>";
 		} else {
 		}
-		$content .= "<div class=\"alert add-clipboard-area\">".getMLText("drag_icon_here")."</div>";
+		$content .= "<div class=\" h-center add-clipboard-area\">".getMLText("drag_icon_here")."</div>";
 		return $content;
 	} /* }}} */
 
@@ -1437,7 +1437,7 @@ $(function() {
 	 */
 	function printClipboard($clipboard){ /* {{{ */
 		$this->contentHeading(getMLText("clipboard"), true);
-		echo "<div id=\"main-clipboard\">\n";
+		echo "<div id=\"main-clipboard\" class='area-container'>\n";
 		echo $this->mainClipboard($clipboard);
 		echo "</div>\n";
 	} /* }}} */
