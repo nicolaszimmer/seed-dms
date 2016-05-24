@@ -318,13 +318,13 @@ body,
 
 /* ui */
 .area-container{
-	height: 50px;
+	min-height: 50px;
     padding: 10px;
     border: 1px dashed #000;
 }
 
 .area-container:hover{
-	border: 1px solid blue;
+	border: 1px solid #000;
 }
 
 .h-center{
