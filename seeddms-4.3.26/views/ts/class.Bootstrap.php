@@ -153,7 +153,6 @@ $(document).ready(function () {
 	} /* }}} */
 
 	function footNote() { /* {{{ */
-		return;
 		echo "<div class=\"container-fluid\">\n";
 		echo '<div class="row-fluid">'."\n";
 		echo '<div class="span12">'."\n";
