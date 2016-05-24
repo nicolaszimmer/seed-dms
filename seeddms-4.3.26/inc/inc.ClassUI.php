@@ -22,12 +22,10 @@ require_once('inc.ClassUI_Default.php');
 require_once('inc.ClassViewCommon.php');
 
 /* $theme was possibly set in inc.Authentication.php */
-if (!isset($theme) || strlen($theme)==0) {
-	$theme = $settings->_theme;
-}
-var_dump($theme);
+$theme = $settings->_theme;
+
 if (strlen($theme)==0) {
-	$theme="bootstrap";
+	$theme="ts";
 }
 
 /* Sooner or later the parent will be removed, because all output will
