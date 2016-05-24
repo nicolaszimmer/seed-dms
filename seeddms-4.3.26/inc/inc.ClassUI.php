@@ -25,7 +25,7 @@ require_once('inc.ClassViewCommon.php');
 if (!isset($theme) || strlen($theme)==0) {
 	$theme = $settings->_theme;
 }
-var_dump($settings);
+var_dump($theme);
 if (strlen($theme)==0) {
 	$theme="bootstrap";
 }
