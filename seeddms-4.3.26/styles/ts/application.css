@@ -173,6 +173,147 @@ li .dropdown-menu:before {
   position: relative;
   float: left;
 }
+
+/* Clear Box-Shadows */
+textarea:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="date"]:focus, 
+input[type="month"]:focus, 
+input[type="time"]:focus, 
+input[type="week"]:focus, 
+input[type="number"]:focus, 
+input[type="email"]:focus, 
+input[type="url"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="color"]:focus,
+.uneditable-input:focus,
+.btn,
+.navbar, 
+.navbar-inner, 
+.navbar-fixed-top .navbar-inner, 
+.navbar-static-top .navbar-inner,
+.progress .bar,
+.thumbnail:hover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+
+
+/* Clear unnecessary background gradients */
+.navbar, 
+.navbar-inner, 
+.navbar-fixed-top .navbar-inner, 
+.navbar-static-top .navbar-inner {
+  background: none;
+}
+
+.btn,
+.progress .bar {
+  background-image: none;
+}
+
+
+/* Clear unnecessary borders */
+code,
+.btn,
+.alert,
+.navbar, 
+.navbar-inner, 
+.navbar-fixed-top .navbar-inner, 
+.navbar-static-top .navbar-inner,
+.well {
+  border: none;
+}
+
+/* Setup a cleaner and more consistent border-radius.
+  Skeuomorphism: 3px; -- and higher depending on what you are doing.
+  Flat: 2px; -- Personal Preference, you can go to 3 or 5 (max, never break this threshold unless circular element / scrollbar)
+*/
+code,
+pre,
+.label,
+.breadcrumb,
+.btn,
+.navbar-inner,
+.navbar-search .search-query,
+.nav-pills .dropdown-menu,
+.nav-pills > li > a,
+.pager li > a, 
+.pager li > span,
+.thumbnail,
+.well {
+  border-radius: 2px;
+}
+
+.nav-tabs > li > a,
+.nav-tabs.nav-stacked > li:first-child > a {
+  border-radius: 2px 2px 0 0;
+}
+
+.nav-tabs .dropdown-menu,
+.nav-tabs.nav-stacked > li:last-child > a,
+.tabs-below > .nav-tabs > li > a {
+  border-radius: 0 0 2px 2px;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.pagination ul > li:first-child > a, .pagination ul > li:first-child > span,
+.pagination-mini ul > li:first-child > a, .pagination-small ul > li:first-child > a, .pagination-mini ul > li:first-child > span, .pagination-small ul > li:first-child > span {
+  border-radius: 2px 0 0 2px;
+}
+
+.tabs-right > .nav-tabs > li > a,
+.pagination ul > li:last-child > a, .pagination ul > li:last-child > span,
+.pagination-mini ul > li:last-child > a, .pagination-small ul > li:last-child > a, .pagination-mini ul > li:last-child > span, .pagination-small ul > li:last-child > span {
+  border-radius: 0 2px 2px 0;
+}
+
+.badge {
+  border-radius: 10px;
+  padding: 0 6px;
+}
+
+/* Setup a cleaner and more realistic box-shadow.
+  Light sources on a webpages that aren't skeuomorphic wouldn't have such strong lighting in-front of them.
+  Don't oversell, be subtle.
+*/
+.dropdown-menu {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Proportionate font-weight metrics
+  Ideally you would use a font that has the following weights:
+    300 (body at 16px), 400 (Strong, Bold, Headers), 600 (Impactful Headlines), 700 (Rare usage to show massic emphasis)
+  If you want a font that does this, Open Sans is free and available to provide this.
+*/
+body,
+.label,
+.badge {
+  font-weight: 300;
+}
+
+/* Clear overpowering text-shadow
+  Is the text readable?
+  Is the weight proportionate to the surrounding context?
+  Is the kerning acceptable with the shadow?
+  You should ask yourself these before saying yes to text-shadow.
+*/
+.label,
+.badge {
+  text-shadow: none;
+}
+
 /***/
 
 
