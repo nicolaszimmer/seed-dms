@@ -340,7 +340,8 @@ $(document).ready(function () {
 	} /* }}} */
 	
 	function pageNavigation($pageTitle, $pageType=null, $extra=null) { /* {{{ */
-
+if($pageType == "view_folder" || $pageType == "view_document")
+				echo $pageTitle."\n";
 		if ($pageType!=null && strcasecmp($pageType, "noNav")) {
 			echo "<div class=\"navbar\">\n";
 			echo " <div class=\"navbar-inner\">\n";
@@ -372,8 +373,6 @@ $(document).ready(function () {
 			echo " 	</div>\n";
 			echo " </div>\n";
 			echo "</div>\n";
-			if($pageType == "view_folder" || $pageType == "view_document")
-				echo $pageTitle."\n";
 		} else {
 			echo "<legend>".$pageTitle."</legend>\n";
 		}
