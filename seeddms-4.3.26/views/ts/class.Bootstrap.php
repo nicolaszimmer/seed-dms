@@ -753,12 +753,11 @@ $(document).ready(function () {
 		$icons["default"] = "icon-file-alt";
 
 		$ext = strtolower(substr($fileType, 1));
-		if (isset($icons[$ext])) {
-			return $this->imgpath.$icons[$ext];
-		}
-		else {
-			return $this->imgpath.$icons["default"];
-		}
+		if (isset($icons[$ext])) 
+			return $icons[$ext];
+
+			return $icons["default"];
+
 	} /* }}} */
 
 	function printFileChooser($varname='userfile', $multiple=false, $accept='') { /* {{{ */
