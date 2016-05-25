@@ -320,7 +320,7 @@ $(document).ready(function () {
 
 	function getFolderPathHTML($folder, $tagAll=false, $document=null) { /* {{{ */
 		$path = $folder->getPath();
-		$txtpath = "<li><strong>".getMLText($document?"document":"folder")."</strong> <span class='divider'>»</span></li>";
+		$txtpath = "<li><strong>".getMLText($document?"document":"folder")."</strong> <i class='icon-caret-right divider'></span></li>";
 		for ($i = 0; $i < count($path); $i++) {
 			$txtpath .= "<li>";
 			if ($i +1 < count($path)) {
