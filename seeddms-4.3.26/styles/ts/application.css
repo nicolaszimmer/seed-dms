@@ -24,15 +24,20 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
   padding:5px 20px 0px;
 }
 
-.navbar.navbar-clean a {
+a, .navbar.navbar-clean a {
   color: #8f8f8f;
+  -webkit-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
+a:hover,
 .navbar.navbar-clean ul > li > a:hover,
 .navbar.navbar-clean li.open a,
 .navbar .nav > li > a:hover,
 .navbar .nav > li.open a {
  color:#e60032;
+ text-decoration: none;
 }
 
 .navbar .nav > li > a,
@@ -379,7 +384,9 @@ input, button, select, textarea, .navbar-search .search-query {
 
 }
 
-
+.larger{
+	font-size: 120%;
+}
 
 body { /* Add top padding for fixed nav-bar */
 	padding-top: 80px;
