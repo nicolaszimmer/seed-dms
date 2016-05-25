@@ -35,7 +35,7 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
  color:#e60032;
 }
 
-.navbar .nav > li > a,
+.navbar .nav > li > a
 {
 	text-shadow:none!important;
 }
