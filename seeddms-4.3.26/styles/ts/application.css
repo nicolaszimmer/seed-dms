@@ -29,8 +29,14 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
 }
 
 .navbar.navbar-clean ul > li > a:hover,
-.navbar.navbar-clean li.open a {
+.navbar.navbar-clean li.open a,
+.navbar .nav > li > a:hover,
+.navbar .nav > li.open a {
  color:#e60032;
+}
+
+.navbar .nav > li > a{
+	text-shadow:none!important;
 }
 
 .navbar.navbar-clean a i {
