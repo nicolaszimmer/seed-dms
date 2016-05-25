@@ -719,11 +719,11 @@ $(document).ready(function () {
 		$icons["xlt"]  = "icon-table";
 		$icons["xlsx"] = "icon-table";
 		$icons["xltx"] = "icon-table";
-		$icons["ppt"]  = "icon-youtube-play";
-		$icons["pot"]  = "icon-youtube-play";
-		$icons["pptx"] = "icon-youtube-play";
-		$icons["potx"] = "icon-youtube-play";
-		$icons["key"] = "icon-youtube-play";
+		$icons["ppt"]  = "icon-play-circle";
+		$icons["pot"]  = "icon-play-circle";
+		$icons["pptx"] = "icon-play-circle";
+		$icons["potx"] = "icon-play-circle";
+		$icons["key"] = "icon-play-circle";
 		$icons["html"] = "icon-code";
 		$icons["htm"]  = "icon-code";
 		$icons["js"]  = "icon-code";

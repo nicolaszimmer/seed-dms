@@ -376,7 +376,7 @@ body,
 	border-bottom: solid 1px #969696!important;
 }
 
-input, button, select, textarea, .navbar-search .search-query {
+input[type="text"], button, select, textarea, .navbar-search .search-query {
     font-family: inherit;
     -webkit-appearance: none;
     -ms-appearance: none;
