@@ -70,8 +70,6 @@ class SeedDMS_Bootstrap_Style extends SeedDMS_View_Common {
 		echo '<link href="../styles/'.$this->theme.'/application.css" rel="stylesheet">'."\n";
 		if($this->extraheader['css'])
 			echo $this->extraheader['css'];
-//		echo '<link href="../styles/'.$this->theme.'/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">'."\n";
-
 		echo '<script type="text/javascript" src="../styles/'.$this->theme.'/jquery/jquery.min.js"></script>'."\n";
 		if($this->extraheader['js'])
 			echo $this->extraheader['js'];
@@ -80,18 +78,8 @@ class SeedDMS_Bootstrap_Style extends SeedDMS_View_Common {
 		echo '<script type="text/javascript" src="../styles/'.$this->theme.'/noty/layouts/topRight.js"></script>'."\n";
 		echo '<script type="text/javascript" src="../styles/'.$this->theme.'/noty/themes/default.js"></script>'."\n";
 		echo '<script type="text/javascript" src="../styles/'.$this->theme.'/jqtree/tree.jquery.js"></script>'."\n";
+		//echo '<script type="text/javascript" src="../styles/'.$this->theme.'/search/searchUi.js"></script>'."\n";
 		echo '<link rel="shortcut icon" href="../styles/'.$this->theme.'/favicon.ico" type="image/x-icon"/>'."\n";
-		if($this->params['session'] && $this->params['session']->getSu()) {
-?>
-<style type="text/css">
-.navbar-inverse .navbar-inner {
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#882222), to(#111111));
-background-image: webkit-linear-gradient(top, #882222, #111111);
-background-image: linear-gradient(to bottom, #882222, #111111);;
-}
-</style>
-<?php
-		}
 		$sitename = trim(strip_tags($this->params['sitename']));
 		echo "<title>".(strlen($sitename)>0 ? $sitename : "SeedDMS").(strlen($title)>0 ? ": " : "").htmlspecialchars($title)."</title>\n";
 		echo "</head>\n";
@@ -300,6 +288,15 @@ $(document).ready(function () {
 			echo "    <li><a href=\"../out/out.Help.php?context=".$tmp[1]."\">".getMLText("help")."</a></li>\n";
 			}
 			echo "   </ul>\n";
+			/*echo '<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="'.getMLText("search")'" type="search" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
+						</form>
+					</div>
+';*/
+			
 			echo "     <form action=\"../out/out.Search.php\" class=\"form-inline navbar-search pull-left\" autocomplete=\"off\">";
 			if ($folder!=null && is_object($folder) && !strcasecmp(get_class($folder), "SeedDMS_Core_Folder")) {
 				echo "      <input type=\"hidden\" name=\"folderid\" value=\"".$folder->getID()."\" />";
@@ -312,10 +309,6 @@ $(document).ready(function () {
 			echo "      <input name=\"query\" class=\"search-query\" id=\"searchfield\" data-provide=\"typeahead\" type=\"text\" style=\"width: 150px;\" placeholder=\"".getMLText("search")."\"/>";
 			if($this->params['defaultsearchmethod'] == 'fulltext')
 				echo "      <input type=\"hidden\" name=\"fullsearch\" value=\"1\" />";
-//			if($this->params['enablefullsearch']) {
-//				echo "      <label class=\"checkbox\" style=\"color: #999999;\"><input type=\"checkbox\" name=\"fullsearch\" value=\"1\" title=\"".getMLText('fullsearch_hint')."\"/> ".getMLText('fullsearch')."</label>";
-//			}
-	//		echo "      <input type=\"submit\" value=\"".getMLText("search")."\" id=\"searchButton\" class=\"btn\"/>";
 			echo "</form>\n";
 			echo "    </div>\n";
 		}
