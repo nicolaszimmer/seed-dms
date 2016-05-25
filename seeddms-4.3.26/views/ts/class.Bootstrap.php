@@ -320,7 +320,7 @@ $(document).ready(function () {
 
 	function getFolderPathHTML($folder, $tagAll=false, $document=null) { /* {{{ */
 		$path = $folder->getPath();
-		$txtpath = "";
+		$txtpath = "<li><strong>".getMLText($document?"document":"folder")."</strong> <span class='divider'>»</span></li>";
 		for ($i = 0; $i < count($path); $i++) {
 			$txtpath .= "<li>";
 			if ($i +1 < count($path)) {
@@ -389,7 +389,7 @@ $(document).ready(function () {
 		}
 		$accessMode = $folder->getAccessMode($this->params['user']);
 		$folderID = $folder->getID();
-		echo "<id=\"first\"><a href=\"../out/out.ViewFolder.php?folderid=". $folderID ."&showtree=".showtree()."\" class=\"brand\">".getMLText("folder")."</a>\n";
+		//echo "<id=\"first\"><a href=\"../out/out.ViewFolder.php?folderid=". $folderID ."&showtree=".showtree()."\" class=\"brand\">".getMLText("folder")."</a>\n";
 		echo "<div class=\"nav-collapse col2\">\n";
 		echo "<ul class=\"nav\">\n";
 
@@ -425,7 +425,7 @@ $(document).ready(function () {
 	private function documentNavigationBar($document)	{ /* {{{ */
 		$accessMode = $document->getAccessMode($this->params['user']);
 		$docid=".php?documentid=" . $document->getID();
-		echo "<id=\"first\"><a href=\"../out/out.ViewDocument". $docid ."\" class=\"brand\">".getMLText("document")."</a>\n";
+		//echo "<id=\"first\"><a href=\"../out/out.ViewDocument". $docid ."\" class=\"brand\">".getMLText("document")."</a>\n";
 		echo "<div class=\"nav-collapse col2\">\n";
 		echo "<ul class=\"nav\">\n";
 
