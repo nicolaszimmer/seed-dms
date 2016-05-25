@@ -407,6 +407,9 @@ legend{
     font-size: 80%;
 }
 
+.breadcrumb{
+	margin: 10px 0 0 0;
+}
 
 /*img.mimeicon {
   -moz-border-bottom-colors: none;

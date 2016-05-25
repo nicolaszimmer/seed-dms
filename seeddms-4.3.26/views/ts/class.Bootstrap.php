@@ -343,8 +343,7 @@ $(document).ready(function () {
 if($pageType == "view_folder" || $pageType == "view_document")
 				echo $pageTitle."\n";
 		if ($pageType!=null && strcasecmp($pageType, "noNav")) {
-			echo "<div class=\"navbar\">\n";
-			echo " <div class=\"navbar-inner\">\n";
+			echo "<div class=\"navbar\" style='font-size:80%'>\n";
 			echo "  <div class=\"container\">\n";
 			echo "   <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".col2\">\n";
 			echo " 		<span class=\"icon-bar\"></span>\n";
