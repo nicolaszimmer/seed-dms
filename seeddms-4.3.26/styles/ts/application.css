@@ -393,7 +393,10 @@ body { /* Add top padding for fixed nav-bar */
 	padding-top: 80px;
 }
 
-
+.navbar .brand{
+	padding: 10px 20px 10px 0px;
+	text-shadow:none!important;
+}
 
 
 /*img.mimeicon {
