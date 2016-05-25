@@ -1696,7 +1696,7 @@ $(document).ready( function() {
 				if($previewer->hasPreview($latestContent)) {
 					$content .= "<img draggable=\"false\" class=\"mimeicon\" width=\"".$previewwidth."\"src=\"../op/op.Preview.php?documentid=".$document->getID()."&version=".$latestContent->getVersion()."&width=".$previewwidth."\" title=\"".htmlspecialchars($latestContent->getMimeType())."\">";
 				} else {
-					$content .= "<img draggable=\"false\" class=\"mimeicon\" src=\"".$this->getMimeIcon($latestContent->getFileType())."\" title=\"".htmlspecialchars($latestContent->getMimeType())."\">";
+					$content .= "<i draggable=\"false\" class=\"".$this->getMimeIcon($latestContent->getFileType())."\" title=\"".htmlspecialchars($latestContent->getMimeType())."\"></i>";
 				}
 				$content .= "</a></td>";
 			} else
@@ -1772,7 +1772,7 @@ $(document).ready( function() {
 		$content = '';
 		$content .= "<tr id=\"table-row-folder-".$subFolder->getID()."\" draggable=\"true\" rel=\"folder_".$subFolder->getID()."\" class=\"folder table-row-folder\" formtoken=\"".createFormKey('movefolder')."\">";
 	//	$content .= "<td><img src=\"images/folder_closed.gif\" width=18 height=18 border=0></td>";
-		$content .= "<td><a _rel=\"folder_".$subFolder->getID()."\" draggable=\"false\" href=\"out.ViewFolder.php?folderid=".$subFolder->getID()."&showtree=".$showtree."\"><img draggable=\"false\" src=\"".$this->imgpath."folder.png\" width=\"24\" height=\"24\" border=0></a></td>\n";
+		$content .= "<td><a class='transient' _rel=\"folder_".$subFolder->getID()."\" draggable=\"false\" href=\"out.ViewFolder.php?folderid=".$subFolder->getID()."&showtree=".$showtree."\"><i class='icon-folder-open-alt larger'></i></a></td>\n";
 		$content .= "<td><a draggable=\"false\" _rel=\"folder_".$subFolder->getID()."\" href=\"out.ViewFolder.php?folderid=".$subFolder->getID()."&showtree=".$showtree."\">" . htmlspecialchars($subFolder->getName()) . "</a>";
 		$content .= "<br /><span style=\"font-size: 85%; font-style: italic; color: #666;\">".getMLText('owner').": <b>".htmlspecialchars($owner->getFullName())."</b>, ".getMLText('creation_date').": <b>".date('Y-m-d', $subFolder->getDate())."</b></span>";
 		if($comment) {
