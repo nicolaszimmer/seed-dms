@@ -357,13 +357,25 @@ body,
 .navbar-search .search-query{
 	-webkit-border-radius: 0px!important;
 	-ms-border-radius: 0px!important;
-border-radius: 0px!important;
-border: 0;
-border-bottom: 1px solid #ccc!important;
+	border-radius: 0px!important;
+	border: 0;
+	border-bottom: 1px solid #ccc!important;
+	-webkit-transition: border 0.3s;
+  	-ms-transition: border 0.3s;
+  	transition: border 0.3s;
 }
 
-input, button, select, textarea {
+.navbar-search .search-query:focus{
+	border-bottom: solid 1px #969696;
+}
+
+input, button, select, textarea, .navbar-search .search-query {
     font-family: inherit;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+  	box-shadow: none;
+
 }
 
 
