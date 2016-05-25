@@ -9,14 +9,18 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
 
 /* clean nav bar */
 .navbar.navbar-clean {
-  background: #fff;
+  background: #eee;
   border-radius: 0;
   border-bottom: 1px solid #bfbfbf;
   color: #8f8f8f;
+  height: 50px;
+  line-height: 20px;
+  padding-top: 15px;
 }
 
 .navbar.navbar-clean .navbar-brand {
   font-weight: 200;
+  padding:5px 20px 0px;
 }
 
 .navbar.navbar-clean a {
@@ -338,8 +342,8 @@ body,
 
 
 
-body { /* Add top padding for full-width layout */
-	padding-top: 60px;
+body { /* Add top padding for fixed nav-bar */
+	padding-top: 80px;
 }
 
 
