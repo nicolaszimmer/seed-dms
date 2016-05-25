@@ -35,7 +35,8 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
  color:#e60032;
 }
 
-.navbar .nav > li > a
+.navbar .nav > li > a,
+.breadcrumb > li
 {
 	text-shadow:none!important;
 }
@@ -359,6 +360,10 @@ body,
 border-radius: 0px!important;
 border: 0;
 border-bottom: 1px solid #ccc!important;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
 }
 
 
