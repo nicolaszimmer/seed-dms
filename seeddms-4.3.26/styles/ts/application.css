@@ -363,10 +363,11 @@ body,
 	-webkit-transition: border 0.3s;
   	-ms-transition: border 0.3s;
   	transition: border 0.3s;
+  	background-color: inherit;
 }
 
 .navbar-search .search-query:focus{
-	border-bottom: solid 1px #969696;
+	border-bottom: solid 1px #969696!important;
 }
 
 input, button, select, textarea, .navbar-search .search-query {
