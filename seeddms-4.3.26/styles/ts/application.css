@@ -35,9 +35,8 @@ b, strong { font-weight: normal; font-family: "ClanOT-Medium"; }
  color:#e60032;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a
-
-.navbar .nav > li > a{
+.navbar .nav > li > a,
+{
 	text-shadow:none!important;
 }
 
