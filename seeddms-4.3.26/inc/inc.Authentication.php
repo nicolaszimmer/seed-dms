@@ -67,7 +67,7 @@ if($user->isAdmin()) {
 }
 $theme = $resArr["theme"];
 $lang = $resArr["language"];
-var_dump($resArr);
+
 
 $dms->setUser($user);
 
