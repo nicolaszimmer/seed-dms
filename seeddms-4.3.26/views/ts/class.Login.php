@@ -95,7 +95,7 @@ $(document).ready( function() {
 		$this->contentStart();
 		$this->pageNavigation(getMLText("sign_in"));
 ?>
-<div style='margin-left: auto; margin-right: auto; max-width: 400px;'>
+<div style='margin-left: auto; margin-right: auto; max-width: 450px;'>
 <?php $this->contentContainerStart(); ?>
 <form class="form-horizontal" action="../op/op.Login.php" method="post" name="form1" id="form">
 <?php

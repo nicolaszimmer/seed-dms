@@ -341,13 +341,14 @@ body,
 
 /* ui */
 .area-container{
-	min-height: 50px;
-    padding: 10px;
-    border: 1px dashed #000;
+    min-height: 50px;
+    padding: 20px;
+    border: 2px dashed #777777;
+    text-align: center;
 }
 
 .area-container:hover{
-	border: 1px dashed #e60032;
+	border: 2px dashed #e60032;
 }
 
 .h-center{
@@ -391,6 +392,15 @@ input[type="text"], button, select, textarea, .navbar-search .search-query {
 
 .smaller{
 	font-size: 80%;
+}
+
+.btn {
+	text-shadow: none;
+    border: 1px solid #777777;
+    padding: 5px 10px;
+    font-size: 90%;
+    text-transform: uppercase;
+    font-family: ClanPro-Medium;
 }
 
 body { /* Add top padding for fixed nav-bar */
