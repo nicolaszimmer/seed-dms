@@ -392,16 +392,16 @@ class SeedDMS_View_ViewDocument extends SeedDMS_Bootstrap_Style {
 		print "</td>\n";
 
 		print "<td><ul class=\"actions unstyled\">\n";
-		print "<li class=\"wordbreak\">".$latestContent->getOriginalFileName() ."</li>\n";
-		print "<li>".getMLText('version').": ".$latestContent->getVersion()."</li>\n";
+		print "<li class=\"wordbreak\"><strong>".$latestContent->getOriginalFileName() ."</stong></li>\n";
+		print "<li class='smaller'>".getMLText('version').": ".$latestContent->getVersion()."</li>\n";
 
 		if ($file_exists)
-			print "<li>". SeedDMS_Core_File::format_filesize($latestContent->getFileSize()) .", ".htmlspecialchars($latestContent->getMimeType())."</li>";
-		else print "<li><span class=\"warning\">".getMLText("document_deleted")."</span></li>";
+			print "<li class='smaller'>". SeedDMS_Core_File::format_filesize($latestContent->getFileSize()) .", ".htmlspecialchars($latestContent->getMimeType())."</li>";
+		else print "<li class='smaller'><span class=\"warning\">".getMLText("document_deleted")."</span></li>";
 
 		$updatingUser = $latestContent->getUser();
-		print "<li>".getMLText("uploaded_by")." <a href=\"mailto:".$updatingUser->getEmail()."\">".htmlspecialchars($updatingUser->getFullName())."</a></li>";
-		print "<li>".getLongReadableDate($latestContent->getDate())."</li>";
+		print "<li class='smaller'>".getMLText("uploaded_by")." <a href=\"mailto:".$updatingUser->getEmail()."\">".htmlspecialchars($updatingUser->getFullName())."</a></li>";
+		print "<li class='smaller'>".getLongReadableDate($latestContent->getDate())."</li>";
 
 		print "</ul>\n";
 		print "<ul class=\"actions unstyled\">\n";
@@ -431,8 +431,8 @@ class SeedDMS_View_ViewDocument extends SeedDMS_Bootstrap_Style {
 			if ($viewonlinefiletypes && in_array(strtolower($latestContent->getFileType()), $viewonlinefiletypes))
 				print "<li><a target=\"_blank\" href=\"../op/op.ViewOnline.php?documentid=".$documentid."&version=". $latestContent->getVersion()."\"><i class=\"icon-star\"></i>" . getMLText("view_online") . "</a></li>";
 		}
-		print "</ul>";
-		print "<ul class=\"unstyled actions\">";
+		//print "</ul>";
+		//print "<ul class=\"unstyled actions\">";
 		if($accessop->mayEditVersion()) {
 			print "<li><a href=\"out.EditOnline.php?documentid=".$documentid."&version=".$latestContent->getVersion()."\"><i class=\"icon-edit\"></i>".getMLText("edit_version")."</a></li>";
 		}

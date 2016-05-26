@@ -425,7 +425,7 @@ legend{
 	color: #777777;
 }
 
-.table-condensed tr > td:first-child {
+.table-condensed{
     font-size: 80%;
 }
 
