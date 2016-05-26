@@ -79,7 +79,7 @@ a:focus,
   border-radius: 2px;
   box-shadow: none;
 }
-.dropdown-menu:before {
+/*.dropdown-menu:before {
   content: "\00a0";
   display: block;
   height: 10px;
@@ -98,7 +98,7 @@ a:focus,
 li .dropdown-menu:before {
   height: 0;
   width: 0;
-}
+}*/
 .dropdown-menu.pull-right {
   right: 0;
   left: auto;

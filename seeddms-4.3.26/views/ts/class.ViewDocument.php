@@ -425,7 +425,7 @@ class SeedDMS_View_ViewDocument extends SeedDMS_Bootstrap_Style {
 
 		print "<td>";
 
-		print "<ul class=\"unstyled actions\">";
+		print "<ul class=\"unstyled actions smaller\">";
 		if ($file_exists){
 			print "<li><a href=\"../op/op.Download.php?documentid=".$documentid."&version=".$latestContent->getVersion()."\"><i class=\"icon-download\"></i>".getMLText("download")."</a></li>";
 			if ($viewonlinefiletypes && in_array(strtolower($latestContent->getFileType()), $viewonlinefiletypes))
