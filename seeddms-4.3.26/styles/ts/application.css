@@ -389,6 +389,10 @@ input[type="text"], button, select, textarea, .navbar-search .search-query {
 	font-size: 130%;
 }
 
+.smaller{
+	font-size: 80%;
+}
+
 body { /* Add top padding for fixed nav-bar */
 	padding-top: 80px;
 }

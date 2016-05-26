@@ -144,7 +144,7 @@ $(document).ready(function () {
 		echo "<div class=\"container-fluid\">\n";
 		echo '<div class="row-fluid">'."\n";
 		echo '<div class="span12">'."\n";
-		echo '<div class="alert alert-info">'."\n";
+		echo '<div class="smaller">'."\n";
 		if ($this->params['printdisclaimer']){
 			echo "<div class=\"disclaimer\">".getMLText("disclaimer")."</div>";
 		}
