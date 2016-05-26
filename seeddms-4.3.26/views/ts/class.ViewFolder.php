@@ -204,7 +204,6 @@ function folderSelected(id, name) {
 				echo "</td>";
 				echo "</tr>";
 			}
-		}
 		$attributes = $folder->getAttributes();
 		if($attributes) {
 			foreach($attributes as $attribute) {
@@ -219,6 +218,7 @@ function folderSelected(id, name) {
 		}
 		echo "</table>\n";
 		$this->contentContainerEnd();
+	}
 		if ($enableDropUpload && $folder->getAccessMode($user) >= M_READWRITE) {
 			echo "</div>";
 			echo "<div class=\"span4\">";
