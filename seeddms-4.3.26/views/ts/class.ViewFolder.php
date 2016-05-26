@@ -159,6 +159,7 @@ function folderSelected(id, name) {
 			echo "<div class=\"row-fluid\">";
 			echo "<div class=\"span8\">";
 		}
+		if($user->isAdmin()) {
 		$owner = $folder->getOwner();
 		$this->contentHeading(getMLText("folder_infos"));
 		$this->contentContainerStart();
@@ -184,7 +185,6 @@ function folderSelected(id, name) {
 		echo "<td>".getLongReadableDate($folder->getDate())."</td>";
 		echo "</tr>";
 
-		if($user->isAdmin()) {
 			echo "<tr>";
 			echo "<td>".getMLText('default_access').":</td>";
 			echo "<td>".$this->getAccessModeText($folder->getDefaultAccess())."</td>";
