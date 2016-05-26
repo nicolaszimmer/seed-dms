@@ -403,6 +403,14 @@ input[type="text"], button, select, textarea, .navbar-search .search-query {
     font-family: ClanPro-Medium;
 }
 
+#dragandrophandler{
+	height: 60px;
+    width: 250px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 body { /* Add top padding for fixed nav-bar */
 	padding-top: 80px;
 }
