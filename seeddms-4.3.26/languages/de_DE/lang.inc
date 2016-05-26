@@ -476,7 +476,7 @@ Old name: [old_name]
 Benutzer: [username]
 URL: [url]',
 'folder_renamed_email_subject' => '[sitename]: [name] - Ordner umbenannt',
-'folder_title' => 'SeedDMS - Ordner: [foldername]',
+'folder_title' => 'Ordner: [foldername]',
 'friday' => 'Freitag',
 'friday_abbr' => 'Fr',
 'from' => 'von',
