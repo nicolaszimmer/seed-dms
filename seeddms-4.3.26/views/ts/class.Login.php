@@ -95,8 +95,8 @@ $(document).ready( function() {
 		$this->contentStart();
 		$this->pageNavigation(getMLText("sign_in"));
 ?>
+<div style='margin-left: auto; margin-right: auto; max-width: 400px;'>
 <?php $this->contentContainerStart(); ?>
-<div class="center" style="text-align:center"><img src="../out/images/vendor/ts_small_horizontal.svg" style="height:auto;width:400px"></div>
 <form class="form-horizontal" action="../op/op.Login.php" method="post" name="form1" id="form">
 <?php
 		if ($refer) {
@@ -159,6 +159,7 @@ $(document).ready( function() {
 </form>
 <?php
 		$this->contentContainerEnd();
+		echo "</div>";
 		$tmpfoot = array();
 		if ($enableguestlogin)
 			$tmpfoot[] = "<a href=\"\" id=\"guestlogin\">" . getMLText("guest_login") . "</a>\n";
