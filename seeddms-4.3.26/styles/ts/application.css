@@ -34,9 +34,7 @@ a, .navbar.navbar-clean a {
 a:hover,
 a:focus,
 .navbar.navbar-clean ul > li > a:hover,
-.navbar.navbar-clean li.open a,
-.navbar .nav > li > a:hover,
-.navbar .nav > li.open a {
+.navbar .nav > li > a:hover{
  color:#e60032;
  text-decoration: none;
 }
