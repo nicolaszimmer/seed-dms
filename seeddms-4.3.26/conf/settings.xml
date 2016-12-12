@@ -7,7 +7,7 @@
        - language: default language (name of a subfolder in folder "languages")
        - theme: default style (name of a subfolder in folder "styles")
     -->
-    <display siteName="Technologiestiftung" footNote="SeedDMS free document management system - www.seeddms.org" printDisclaimer="false" language="de_DE" theme="bootstrap" previewWidthList="40" previewWidthDetail="100">  
+    <display siteName="Technologiestiftung" footNote="SeedDMS free document management system - www.seeddms.org" printDisclaimer="false" language="de_DE" theme="bootstrap" previewWidthList="40" previewWidthDetail="100">
     </display>
     <!-- strictFormCheck: Strict form checking. If set to true, then all fields in the form will be checked for a value. If set to false, then (most) comments and keyword fields become optional. Comments are always required when submitting a review or overriding document status.
        - viewOnlineFileTypes: files with one of the following endings can be viewed online (USE ONLY LOWER CASE CHARACTERS)
@@ -19,20 +19,20 @@
        - enableFolderTree: false to don't show the folder tree
        - expandFolderTree: 0 to start with tree hidden
        -                   1 to start with tree shown and first level expanded
-       -                   2 to start with tree shown fully expanded     
+       -                   2 to start with tree shown fully expanded
        - stopWordsFile: path to stop word file for indexer
        - sortUsersInList: how to sort users in lists ('fullname' or '' (default))
-    -->   
+    -->
     <edition strictFormCheck="false" viewOnlineFileTypes=".txt;.text;.html;.htm;.pdf;.gif;.png;.jpg;.jpeg" enableConverting="true" enableEmail="true" enableUsersView="true" enableFullSearch="true" enableFolderTree="true" expandFolderTree="1" enableLanguageSelector="true" stopWordsFile="" sortUsersInList="" enableRecursiveCount="false" maxRecursiveCount="0" enableClipboard="true" enableThemeSelector="false" sortFoldersDefault="n" enableDropUpload="true" enableHelp="false" fullSearchEngine="lucene" defaultSearchMethod="database" editOnlineFileTypes="">
-    </edition> 
+    </edition>
     <!-- enableCalendar: enable/disable calendar
        - calendarDefaultView: calendar default view ("w" for week,"m" for month,"y" for year)
        - firstDayOfWeek: first day of the week (0=sunday, 6=saturday)
-    -->  
+    -->
     <calendar enableCalendar="true" calendarDefaultView="y" firstDayOfWeek="1">
     </calendar>
   </site>
-  
+
   <system>
     <!-- rootDir: Path to where SeedDMS is located
        - httpRoot: The relative path in the URL, after the domain part. Do not include the
@@ -46,9 +46,9 @@
        - logFileEnable: set false to disable log system
        - logFileRotation: the log file rotation (h=hourly, d=daily, m=monthly)
     -->
-    <server rootDir="/var/www/seeddms43x/www/" httpRoot="/seeddms43x/www/" contentDir="/var/www/seeddms43x/data/" stagingDir="/var/www/seeddms43x/data/staging/" luceneDir="/var/www/seeddms43x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="true" partitionSize="2000000" cacheDir="/var/www/seeddms43x/data/cache/" dropFolderDir="">
+    <server rootDir="/var/www/seeddms43x/www/" httpRoot="/" contentDir="/var/www/seeddms43x/data/" stagingDir="/var/www/seeddms43x/data/staging/" luceneDir="/var/www/seeddms43x/data/lucene/" logFileEnable="true" logFileRotation="d" enableLargeFileUpload="true" partitionSize="2000000" cacheDir="/var/www/seeddms43x/data/cache/" dropFolderDir="">
     </server>
-    
+
     <!-- enableGuestLogin: If you want anybody to login as guest, set the following line to true
        -                   note: guest login should be used only in a trusted environment
 			 - enablePasswordForgotten: Allow users to reset their password
@@ -60,7 +60,7 @@
 			 - passwordHistory: number of remembered passwords
 			 - passwordStrengthAlgorithm: algorithm used to calculate password strenght (simple or advanced)
 			 - encryptionKey: arbitrary string used for creating identifiers
-    -->    
+    -->
     <authentication enableGuestLogin="false" enablePasswordForgotten="false" restricted="true" enableUserImage="false" disableSelfEdit="false" passwordStrength="0" passwordExpiration="0" passwordHistory="0" passwordStrengthAlgorithm="simple" loginFailure="0" encryptionKey="d20c4a7e15032ae51a5fe02f504836a5" quota="0" cookieLifetime="0" undelUserIds="" enableGuestAutoLogin="false">
       <connectors>
         <!-- ***** CONNECTOR LDAP  *****
@@ -70,7 +70,7 @@
            -       URIs are supported, e.g.: ldaps://ldap.host.com
            - port: port of the authentification server
            - baseDN: top level of the LDAP directory tree
-        -->  
+        -->
         <connector enable="false" type="ldap" host="ldaps://ldap.host.com" port="389" baseDN="">
         </connector>
         <!-- ***** CONNECTOR Microsoft Active Directory  *****
@@ -80,7 +80,7 @@
            - port: port of the authentification server
            - baseDN: top level of the LDAP directory tree
            - accountDomainName: sample: example.com
-        -->  
+        -->
         <connector enable="false" type="AD" host="ldap.example.com" port="389" baseDN="" accountDomainName="example.com">
         </connector>
       </connectors>
@@ -91,28 +91,28 @@
        - dbDatabase: database where the tables for seeddms are stored (optional - see adodb-readme)
        - dbUser: username for database-access
        - dbPass: password for database-access
-    -->    
+    -->
     <database dbDriver="mysql" dbHostname="srcrdb.cxnxvpighu0r.us-east-1.rds.amazonaws.com" dbDatabase="seeddms" dbUser="seeddms" dbPass="S0r(erer" doNotCheckVersion="false">
     </database>
     <!-- smtpServer: SMTP Server hostname
        - smtpPort: SMTP Server port
        - smtpSendFrom: Send from
-    -->    
-    <smtp smtpServer="localhost" smtpPort="25" smtpSendFrom="seeddms@localhost"/>    
+    -->
+    <smtp smtpServer="localhost" smtpPort="25" smtpSendFrom="seeddms@localhost"/>
   </system>
- 
-  
+
+
   <advanced>
     <!-- siteDefaultPage: Default page on login. Defaults to out/out.ViewFolder.php
        - rootFolderID: ID of root-folder (mostly no need to change)
        - titleDisplayHack: Workaround for page titles that go over more than 2 lines.
-    -->  
+    -->
     <display siteDefaultPage="" rootFolderID="1" titleDisplayHack="true" showMissingTranslations="false">
     </display>
     <!-- guestID: ID of guest-user used when logged in as guest (mostly no need to change)
        - adminIP: if enabled admin can login only by specified IP addres, leave empty to avoid the control
        -          NOTE: works only with local autentication (no LDAP)
-    --> 
+    -->
     <authentication guestID="2" adminIP="">
     </authentication>
     <!-- enableAdminRevApp: false to don't list administrator as reviewer/approver
@@ -121,7 +121,7 @@
        - enableVersionDeletion: allow to delete versions after approval
        - enableVersionModification: allow to modify versions after approval
        - enableDuplicateDocNames: allow duplicate names in a folder
-    --> 
+    -->
     <edition enableAdminRevApp="false" versioningFileName="versioning_info.txt" workflowMode="advanced" enableVersionDeletion="true" enableVersionModification="true" enableDuplicateDocNames="true" enableOwnerRevApp="false" enableSelfRevApp="false" presetExpirationDate="" overrideMimeType="false">
     </edition>
 		<!-- enableNotificationAppRev: true to send notifation if a user is added as a reviewer or approver
@@ -130,11 +130,11 @@
     </notification>
     <!-- coreDir: Path to SeedDMS_Core (optional)
        - luceneClassDir: Path to SeedDMS_Lucene (optional)
-       - contentOffsetDir: To work around limitations in the underlying file system, a new 
-       -                   directory structure has been devised that exists within the content 
-       -                   directory ($_contentDir). This requires a base directory from which 
-       -                   to begin. Usually leave this to the default setting, 1048576, but can 
-       -                   be any number or string that does not already exist within $_contentDir.	
+       - contentOffsetDir: To work around limitations in the underlying file system, a new
+       -                   directory structure has been devised that exists within the content
+       -                   directory ($_contentDir). This requires a base directory from which
+       -                   to begin. Usually leave this to the default setting, 1048576, but can
+       -                   be any number or string that does not already exist within $_contentDir.
        - maxDirID: Maximum number of sub-directories per parent directory. Default: 0, use 31998 (maximum number of dirs in ext3) for a multi level content directory.
        - updateNotifyTime: users are notified about document-changes that took place within the last "updateNotifyTime" seconds
        - extraPath: Path to addtional software. This is the directory containing additional software like the adodb directory, or the pear Log package. This path will be added to the php include path
