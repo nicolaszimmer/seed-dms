@@ -141,7 +141,7 @@ $(document).ready(function () {
 	} /* }}} */
 
 	function footNote() { /* {{{ */
-		echo "<div class=\"container-fluid\">\n";
+		echo "<div class=\"container-fluid\" style="position:relative;bottom:-20px">\n";
 		echo '<div class="row-fluid">'."\n";
 		echo '<div class="span12">'."\n";
 		echo '<div class="smaller">'."\n";
@@ -156,7 +156,7 @@ $(document).ready(function () {
 		echo "</div>\n";
 		echo "</div>\n";
 		echo "</div>\n";
-	
+
 		return;
 	} /* }}} */
 
@@ -296,7 +296,7 @@ $(document).ready(function () {
 						</form>
 					</div>
 ';*/
-			
+
 			echo "     <form action=\"../out/out.Search.php\" class=\"form-inline navbar-search pull-left\" autocomplete=\"off\">";
 			if ($folder!=null && is_object($folder) && !strcasecmp(get_class($folder), "SeedDMS_Core_Folder")) {
 				echo "      <input type=\"hidden\" name=\"folderid\" value=\"".$folder->getID()."\" />";
@@ -338,7 +338,7 @@ $(document).ready(function () {
 
 		return '<ul class="breadcrumb">'.$txtpath.'</ul>';
 	} /* }}} */
-	
+
 	function pageNavigation($pageTitle, $pageType=null, $extra=null) { /* {{{ */
 if($pageType == "view_folder" || $pageType == "view_document")
 				echo $pageTitle."\n";
@@ -466,8 +466,8 @@ if($pageType == "view_folder" || $pageType == "view_document")
 
 		if ($this->params['user']->isAdmin() || !$this->params['disableselfedit'])
 			echo "<li id=\"first\"><a href=\"../out/out.EditUserData.php\">".getMLText("edit_user_details")."</a></li>\n";
-		
-		if (!$this->params['user']->isAdmin()) 
+
+		if (!$this->params['user']->isAdmin())
 			echo "<li><a href=\"../out/out.UserDefaultKeywords.php\">".getMLText("edit_default_keywords")."</a></li>\n";
 
 		echo "<li><a href=\"../out/out.ManageNotify.php\">".getMLText("edit_existing_notify")."</a></li>\n";
@@ -475,7 +475,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 		if ($this->params['enableusersview']){
 			echo "<li><a href=\"../out/out.UsrView.php\">".getMLText("users")."</a></li>\n";
 			echo "<li><a href=\"../out/out.GroupView.php\">".getMLText("groups")."</a></li>\n";
-		}		
+		}
 		echo "</ul>\n";
 		echo "</div>\n";
 		return;
@@ -574,7 +574,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 		echo "</div>\n";
 		return;
 	} /* }}} */
-	
+
 	private function calendarNavigationBar($d){ /* {{{ */
 		$ds="&day=".$d[0]."&month=".$d[1]."&year=".$d[2];
 		echo "<id=\"first\"><a href=\"../out/out.Calendar.php?mode=y\" class=\"brand\">".getMLText("calendar")."</a>\n";
@@ -588,7 +588,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 		echo "</ul>\n";
 		echo "</div>\n";
 		return;
-	
+
 	} /* }}} */
 
 	function pageList($pageNumber, $totalPages, $baseURI, $params) { /* {{{ */
@@ -751,7 +751,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 		$icons["default"] = "icon-file-alt";
 
 		$ext = strtolower(substr($fileType, 1));
-		if (isset($icons[$ext])) 
+		if (isset($icons[$ext]))
 			return $icons[$ext];
 
 			return $icons["default"];
@@ -774,7 +774,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 	} /* }}} */
 
 	function printDateChooser($defDate = -1, $varName) { /* {{{ */
-	
+
 		if ($defDate == -1)
 			$defDate = mktime();
 		$day   = date("d", $defDate);
@@ -799,7 +799,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
 			print ">" . $i . "</option>\n";
 		}
 		print "</select> \n";
-		print "<select name=\"" . $varName . "year\">\n";	
+		print "<select name=\"" . $varName . "year\">\n";
 		for ($i = $year-5 ; $i <= $year+5 ; $i++)
 		{
 			print "<option value=\"" . $i . "\"";
@@ -855,7 +855,7 @@ if($pageType == "view_folder" || $pageType == "view_document")
     <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true"><?php printMLText("close") ?></button>
   </div>
 </div>
-<?php 
+<?php
 	} /* }}} */
 
 	function printDocumentChooserJs($formName) { /* {{{ */
@@ -1155,7 +1155,7 @@ $('#clearfilename<?php print $formName ?>').click(function(ev) {
 	} /* }}} */
 
 	function exitError($pagetitle, $error, $noexit=false) { /* {{{ */
-	
+
 		$this->htmlStartPage($pagetitle);
 		$this->globalNavigation();
 		$this->contentStart();
@@ -1165,16 +1165,16 @@ $('#clearfilename<?php print $formName ?>').click(function(ev) {
 		print htmlspecialchars($error);
 		print "</div>";
 		print "<div><button class=\"btn history-back\">".getMLText('back')."</button></div>";
-		
+
 		$this->contentEnd();
 		$this->htmlEndPage();
-		
+
 		add_log_line(" UI::exitError error=".$error." pagetitle=".$pagetitle);
 
 		if($noexit)
 			return;
 
-		exit;	
+		exit;
 	} /* }}} */
 
 	function printNewTreeNavigation($folderid=0, $accessmode=M_READ, $showdocs=0, $formid='form1', $expandtree=0, $orderby='') { /* {{{ */
@@ -1261,7 +1261,7 @@ $('#clearfilename<?php print $formName ?>').click(function(ev) {
 				}
 			}
 			$tree[] = $node;
-			
+
 		} else {
 			$root = $this->params['dms']->getFolder($this->params['rootfolderid']);
 			$tree = array(array('label'=>$root->getName(), 'id'=>$root->getID(), 'load_on_demand'=>true, 'is_folder'=>true));
@@ -1355,7 +1355,7 @@ $(function() {
 						$previewer->createPreview($latestContent);
 						$version = $latestContent->getVersion();
 						$status = $latestContent->getStatus();
-						
+
 						$content .= "<tr draggable=\"true\" rel=\"document_".$docid."\" class=\"table-row-document\" formtoken=\"".createFormKey('movedocument')."\">";
 
 						if (file_exists($dms->contentDir . $latestContent->getPath())) {
@@ -1368,7 +1368,7 @@ $(function() {
 							$content .= "</a></td>";
 						} else
 							$content .= "<td><img draggable=\"false\" class=\"mimeicon\" src=\"".$this->getMimeIcon($latestContent->getFileType())."\" title=\"".htmlspecialchars($latestContent->getMimeType())."\"></td>";
-						
+
 						$content .= "<td><a draggable=\"false\" href=\"out.ViewDocument.php?documentid=".$docid."&showtree=".showtree()."\">" . htmlspecialchars($document->getName()) . "</a>";
 						if($comment) {
 							$content .= "<br /><span style=\"font-size: 85%;\">".htmlspecialchars($comment)."</span>";
@@ -1656,7 +1656,7 @@ $(document).ready( function() {
 					$needwkflaction = $latestContent->needsWorkflowAction($user);
 				}
 			}
-			
+
 			/* Retrieve attacheѕ files */
 			$files = $document->getDocumentFiles();
 
@@ -1674,7 +1674,7 @@ $(document).ready( function() {
 				$content .= "</a></td>";
 			} else
 				$content .= "<td><img draggable=\"false\" class=\"mimeicon\" src=\"".$this->getMimeIcon($latestContent->getFileType())."\" title=\"".htmlspecialchars($latestContent->getMimeType())."\"></td>";
-			
+
 			$content .= "<td><a draggable=\"false\" href=\"out.ViewDocument.php?documentid=".$docID."&showtree=".$showtree."\">" . htmlspecialchars($document->getName()) . "</a>";
 			$content .= "<br /><span style=\"font-size: 85%; font-style: italic; color: #666; \">".getMLText('owner').": <b>".htmlspecialchars($owner->getFullName())."</b>, ".getMLText('creation_date').": <b>".date('Y-m-d', $document->getDate())."</b>, ".getMLText('version')." <b>".$version."</b> - <b>".date('Y-m-d', $latestContent->getDate())."</b></span>";
 			if($comment) {
@@ -1863,12 +1863,12 @@ mayscript>
      */
     function uploaderFileStatusChanged( uploader, file ) {
         traceEvent( "uploaderFileStatusChanged, index=" + file.getIndex() + ", status=" + file.getStatus() + ", content=" + file.getResponseContent() );
-        if( file.isFinished() ) { 
-            var serverFileName = file.getId() + "." + file.getName(); 
-            var linkHtml = "<a href='/uploaded/" + serverFileName + "'>" + serverFileName + "</a> " + file.getLength() + " bytes"; 
-            var container = document.getElementById( "fileLinks"); 
-            container.innerHTML += linkHtml + "<br />"; 
-        } 
+        if( file.isFinished() ) {
+            var serverFileName = file.getId() + "." + file.getName();
+            var linkHtml = "<a href='/uploaded/" + serverFileName + "'>" + serverFileName + "</a> " + file.getLength() + " bytes";
+            var container = document.getElementById( "fileLinks");
+            container.innerHTML += linkHtml + "<br />";
+        }
     }
     /**
      * trace event to events textarea
@@ -2041,7 +2041,7 @@ mayscript>
          var files = uploader.getAllFiles();
          var file = getSelectedFile();
 				 if(file) {
-					 for (var i = 0; i < uploader.getFileCount() ; i++) { 
+					 for (var i = 0; i < uploader.getFileCount() ; i++) {
 						 if(uploader.getFile(i).getIndex() == file.getIndex())
 							 content += listFileAttributes( uploader.getFile(i), 1, i );
 						 else
@@ -2258,7 +2258,7 @@ mayscript>
 		timeline = new links.Timeline(document.getElementById('timeline'), options);
 		links.events.addListener(timeline, 'select', onselect);
 		$.getJSON(
-			'<?php echo $timelineurl ?>', 
+			'<?php echo $timelineurl ?>',
 			function(data) {
 				$.each( data, function( key, val ) {
 					val.start = new Date(val.start);
