@@ -141,7 +141,7 @@ $(document).ready(function () {
 	} /* }}} */
 
 	function footNote() { /* {{{ */
-		echo "<div class=\"container-fluid\" style="position:relative;bottom:-20px">\n";
+		echo "<div class=\"container-fluid\" style=\"position:relative;bottom:-20px\">\n";
 		echo '<div class="row-fluid">'."\n";
 		echo '<div class="span12">'."\n";
 		echo '<div class="smaller">'."\n";
