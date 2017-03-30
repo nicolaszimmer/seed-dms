@@ -92,7 +92,7 @@
        - dbUser: username for database-access
        - dbPass: password for database-access
     -->
-    <database dbDriver="mysql" dbHostname="srcrdb.cxnxvpighu0r.us-east-1.rds.amazonaws.com" dbDatabase="seeddms" dbUser="seeddms" dbPass="S0r(erer" doNotCheckVersion="false">
+    <database dbDriver="mysql" dbHostname="sorcererdb.cxnxvpighu0r.us-east-1.rds.amazonaws.com" dbDatabase="seeddms" dbUser="seeddms" dbPass="S0r(erer" doNotCheckVersion="false">
     </database>
     <!-- smtpServer: SMTP Server hostname
        - smtpPort: SMTP Server port
